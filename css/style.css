@@ -3,6 +3,11 @@
   src: url(../fonts/BeaufortforLOL-BoldItalic.ttf);
 }
 
+@font-face {
+  font-family: fontsTitle2;
+  src: url(../fonts/Tungsten-Bold.ttf);
+}
+
 h1 {
   font-family: fontsTitle;
   font-size: 50px;
@@ -26,13 +31,16 @@ p {
   align-items: center;
 }
 .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 8px 56px 0;
   border: 1px solid;
   text-decoration: none;
   text-align: center;
   color: white;
   width: 176px;
-  padding: 8px;
+  height: 40px;
   border-radius: 10px 0 10px 0;
 }
 #firstButton {
@@ -46,4 +54,14 @@ p {
 
 .compétencesSpéciales {
   background-color: rgb(236, 232, 225);
+  height: 500px;
+}
+
+.titleCompétencesSpéciales {
+  font-family: fontsTitle2;
+  letter-spacing: 5px;
+  color: #0f1923;
+  font-weight: 400;
+}
+
 }
