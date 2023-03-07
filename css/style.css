@@ -7,8 +7,14 @@
   align-items: center;
 }
 h1 {
-    font-family: "Beaufort for LOL", serif;
+    font-family: "Beaufort for LoL", serif;
+    font-size: 50px;
     font-style: italic;
     text-transform: uppercase;
-};
+}
+p {
+  font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.08em;
+}
+
 }
