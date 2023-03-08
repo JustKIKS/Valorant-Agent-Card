@@ -44,24 +44,41 @@
       </div>
     </section>
     <section class="special-skills-container">
-      <div class="spell">
-        <h2 class="title-special-skills">Compétences spéciales</h2>
-        <div class="spell-icon">
-          <button>
-            <img src="./img/jump.png" alt="" />
+      <div class="background-line"></div>
+      <div>
+        <h2 class="agent-name">Jett</h2>
+        <h3 class="title-special-skills">Compétences spéciales</h3>
+        <div class="spell-icon-container">
+          <button class="spell-icon" id="spell-selected">
+            <img src="./img/jump.png" alt="jump" height="72px" />
           </button>
-          <button>
-            <img src="./img/dash.png" alt="" />
+          <button class="spell-icon">
+            <img src="./img/dash.png" alt="dash" height="72px" />
           </button>
-          <button>
-            <img src="./img/smoke.png" alt="" />
+          <button class="spell-icon">
+            <img src="./img/smoke.png" alt="smoke" height="72px" />
           </button>
-          <button>
-            <img src="./img/ult.png" alt="" />
+          <button class="spell-icon">
+            <img src="./img/ult.png" alt="ult" height="72px" />
           </button>
         </div>
+        <p id="spell-title"><strong>A</strong> - Courant Ascendant</p>
+        <p id="spell-description">
+          Vous vous propulsez <br />
+          INSTANTANÉMENT dans les airs.
+        </p>
       </div>
-      <img class="jett-img" src="./img/jett.png" alt="imageJett" />
+      <div class="spell-video">
+        <video
+          autoplay
+          muted
+          loop
+          id="jump-video"
+          src="./video/jett-q.mp4"
+        ></video>
+      </div>
     </section>
   </body>
 </html>
+
+<!-- <img class="jett-img" src="./img/jett.png" alt="imageJett" /> -->
