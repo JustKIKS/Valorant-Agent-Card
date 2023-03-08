@@ -1,18 +1,15 @@
 @font-face {
-  font-family: fontsTitle;
-  src: url(../fonts/BeaufortforLOL-Bold.ttf);
-}
-
-@font-face {
   font-family: fontsTitle2;
   src: url(../fonts/Tungsten-Bold.ttf);
 }
 
 h1 {
-  font-family: fontsTitle;
-  font-size: 48px;
+  font-family: fontsTitle2;
+  font-size: 56px;
   text-transform: uppercase;
   margin: 0;
+  font-weight: 400;
+  letter-spacing: 5px;
 }
 
 p {
@@ -61,11 +58,17 @@ p {
 #first-button {
   background-color: rgb(208, 168, 92);
   border-color: #d0a85c;
+  font-family: fontsTitle2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #second-button {
   background-color: rgb(9, 197, 227);
   border-color: #09c5e3;
+  font-family: fontsTitle2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .special-skills-container {
