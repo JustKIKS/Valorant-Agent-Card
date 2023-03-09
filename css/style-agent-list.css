@@ -1,0 +1,74 @@
+.title {
+  text-align: center;
+  font-family: primary-fonts;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 128px 16px 64px 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 285px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: rgba(194, 192, 192, 0.1);
+  box-shadow: 10px 5px 5px #cacaca;
+}
+
+.card-link {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.card-image {
+  height: 150px;
+  border-radius: 7px;
+}
+
+.name-agent-and-agent-class {
+  font-family: primary-fonts;
+  font-weight: 200;
+  font-size: 24px;
+}
+
+description-under-name {
+}
+
+#link-agent {
+  font-weight: 200;
+  font-family: primary-fonts;
+  text-decoration: none;
+  color: #a0a0a0;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+}
+
+.color-duellist {
+  color: red;
+}
+
+.name-agent-and-agent-class-container {
+  text-align: center;
+}
+
+.home {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
