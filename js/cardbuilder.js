@@ -1,7 +1,6 @@
 // ##########
 // ## Data ##
 // ##########
-
 const duellistArray = [
   {
     img: "./img/Jett 2.png",
@@ -11,8 +10,8 @@ const duellistArray = [
   },
   {
     img: "./img/Raze.png",
-    agentName: "Raze 2",
-    agentClass: "Duellist 2",
+    agentName: "Raze",
+    agentClass: "Duellist",
     linkLore: "https://valorant-lore.fandom.com/wiki/Raze",
   },
   {
@@ -35,68 +34,99 @@ const duellistArray = [
   },
 ];
 
-// ##############################
-// ## SECTION TITLE GENERATION ##
-// ##############################
+const controllersArray = [
+  {
+    img: "./img/Omen_v2.png",
+    agentName: "Omen",
+    agentClass: "controllers",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Omen",
+  },
+  {
+    img: "./img/Brimstone.png",
+    agentName: "Brimstone",
+    agentClass: "controllers",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Brimstone",
+  },
+  {
+    img: "./img/Astra.jpeg",
+    agentName: "Astra",
+    agentClass: "controllers",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Astra",
+  },
+  {
+    img: "./img/Viper.png",
+    agentName: "Viper",
+    agentClass: "controllers",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Viper",
+  },
+];
 
-const sectionCard = document.createElement("section");
-sectionCard.classList.add("home");
+const duellistsSection = {
+  title: "Duellist",
+  agents: duellistArray,
+};
 
-const listClassOl = document.createElement("ol");
-sectionCard.classList.add("class-list");
+const controllersSection = {
+  title: "Controllers",
+  agents: controllersArray,
+};
 
-const listClassLi = document.createElement("li");
+const sections = [duellistsSection, controllersSection];
 
-const agentClass = document.createElement("h2");
-agentClass.classList.add("class-valorant");
-agentClass.textContent = "Duellist";
+for (let h = 0; h < sections.length; h++) {
+  const sectionElement = document.createElement("section");
+  sectionElement.classList.add("home");
 
-listClassLi.appendChild(agentClass);
-listClassOl.appendChild(listClassLi);
-sectionCard.appendChild(listClassOl);
+  const listClassOl = document.createElement("ol");
+  listClassOl.classList.add("class-list");
 
-// ######################
-// ## CARDS GENERATION ##
-// ######################
+  const listClassLi = document.createElement("li");
 
-const cardContainer = document.createElement("div");
-cardContainer.classList.add("container");
+  const agentTitleElement = document.createElement("h2");
+  agentTitleElement.classList.add("class-valorant");
+  agentTitleElement.textContent = sections[h].title;
 
-for (let i = 0; i < 5; i++) {
-  console.log(duellistArray[i]);
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("card");
+  listClassLi.appendChild(agentTitleElement);
+  listClassOl.appendChild(listClassLi);
+  sectionElement.appendChild(listClassOl);
+  document.body.appendChild(sectionElement);
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("container");
 
-  const cardImage = document.createElement("img");
-  cardImage.classList.add("card-image");
-  cardImage.src = duellistArray[i].img;
+  const agents = sections[h].agents;
+  for (let g = 0; g < agents.length; g++) {
+    const agent = agents[g];
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
 
-  const agentInfosContainer = document.createElement("div");
-  agentInfosContainer.classList.add("name-agent-and-agent-class-container");
+    const cardImage = document.createElement("img");
+    cardImage.classList.add("card-image");
+    cardImage.src = agent.img;
 
-  const agentName = document.createElement("p");
-  agentName.classList.add("name-agent-and-agent-class");
-  agentName.textContent = duellistArray[i].agentName + " - ";
+    const agentInfosContainer = document.createElement("div");
+    agentInfosContainer.classList.add("name-agent-and-agent-class-container");
 
-  const agentNameSpan = document.createElement("span");
-  agentNameSpan.textContent = duellistArray[i].agentClass;
-  agentNameSpan.classList.add("color-duellist");
+    const agentName = document.createElement("p");
+    agentName.classList.add("name-agent-and-agent-class");
+    agentName.textContent = agent.agentName + " - ";
 
-  const agentLink = document.createElement("a");
-  agentLink.classList.add("description-under-name");
-  agentLink.id = "link-agent";
-  agentLink.href = duellistArray[i].linkLore;
-  agentLink.textContent =
-    "Découvrir l'histoire de " + duellistArray[i].agentName;
-  agentLink.target = "_blank";
+    const agentNameSpan = document.createElement("span");
+    agentNameSpan.textContent = agent.agentClass;
+    agentNameSpan.classList.add("color-duellist");
 
-  agentName.appendChild(agentNameSpan);
-  agentInfosContainer.appendChild(agentName);
-  agentInfosContainer.appendChild(agentLink);
-  cardElement.appendChild(cardImage);
-  cardElement.appendChild(agentInfosContainer);
-  cardContainer.appendChild(cardElement);
-  sectionCard.appendChild(cardContainer);
+    const agentLink = document.createElement("a");
+    agentLink.classList.add("description-under-name");
+    agentLink.id = "link-agent";
+    agentLink.href = agent.linkLore;
+    agentLink.textContent = "Découvrir l'histoire de " + agent.agentName;
+    agentLink.target = "_blank";
+
+    agentName.appendChild(agentNameSpan);
+    agentInfosContainer.appendChild(agentName);
+    agentInfosContainer.appendChild(agentLink);
+    cardElement.appendChild(cardImage);
+    cardElement.appendChild(agentInfosContainer);
+    cardContainer.appendChild(cardElement);
+    sectionElement.appendChild(cardContainer);
+  }
 }
-
-document.body.appendChild(sectionCard);
