@@ -3,7 +3,7 @@
 // ##########
 const duellistArray = [
   {
-    img: "./img/Jett 2.png",
+    img: "./img/jett 2.png",
     agentName: "Jett",
     agentClass: "Duellist",
     linkLore: "https://valorant-lore.fandom.com/wiki/Jett",
@@ -165,7 +165,6 @@ for (let h = 0; h < sections.length; h++) {
   agentTitleElement.textContent = sections[h].title;
 
   sectionElement.appendChild(agentTitleElement);
-  document.body.appendChild(sectionElement);
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("container");
 
@@ -204,8 +203,8 @@ for (let h = 0; h < sections.length; h++) {
     cardElement.appendChild(agentInfosContainer);
     cardContainer.appendChild(cardElement);
     sectionElement.appendChild(cardContainer);
+
+    const div = document.getElementById("content");
+    div.appendChild(sectionElement);
   }
 }
-
-const div = getElementById("content");
-getElementByClassname();
