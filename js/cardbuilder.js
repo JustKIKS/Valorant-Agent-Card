@@ -61,6 +61,70 @@ const controllersArray = [
   },
 ];
 
+const initiatorsArray = [
+  {
+    img: "./img/Kayo.png",
+    agentName: "Kay/o",
+    agentClass: "initiators",
+    linkLore: "https://valorant-lore.fandom.com/wiki/KAY/O",
+  },
+  {
+    img: "./img/Breach_v2.png",
+    agentName: "Breach",
+    agentClass: "initiators",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Brimstone",
+  },
+  {
+    img: "./img/Sova.png",
+    agentName: "Sova",
+    agentClass: "initiators",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Sova",
+  },
+  {
+    img: "./img/Skye_v2.png",
+    agentName: "Skye",
+    agentClass: "initiators",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Skye",
+  },
+  {
+    img: "./img/Fade.png",
+    agentName: "Fade",
+    agentClass: "initiators",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Fade",
+  },
+];
+
+const sentinelsArray = [
+  {
+    img: "./img/Killjoy_v2.png",
+    agentName: "Killjoy",
+    agentClass: "sentinels",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Killjoy",
+  },
+  {
+    img: "./img/Cypher_v2.png",
+    agentName: "Cypher",
+    agentClass: "sentinels",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Cypher",
+  },
+  {
+    img: "./img/Sage_v2.png",
+    agentName: "Sage",
+    agentClass: "sentinels",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Sage",
+  },
+  {
+    img: "./img/Chamber.jpeg",
+    agentName: "Chamber",
+    agentClass: "sentinels",
+    linkLore: "https://valorant-lore.fandom.com/wiki/Chamber",
+  },
+];
+
+// #############
+// ## Section ##
+// #############
+
 const duellistsSection = {
   title: "Duellist",
   agents: duellistArray,
@@ -71,31 +135,43 @@ const controllersSection = {
   agents: controllersArray,
 };
 
-const sections = [duellistsSection, controllersSection];
+const initiatorsSection = {
+  title: "Initiators",
+  agents: initiatorsArray,
+};
+
+const sentinelsSection = {
+  title: "Sentinels",
+  agents: sentinelsArray,
+};
+
+// ##########
+// ## Table-Loop ##
+// ##########
+
+const sections = [
+  duellistsSection,
+  controllersSection,
+  initiatorsSection,
+  sentinelsSection,
+];
 
 for (let h = 0; h < sections.length; h++) {
   const sectionElement = document.createElement("section");
   sectionElement.classList.add("home");
 
-  const listClassOl = document.createElement("ol");
-  listClassOl.classList.add("class-list");
-
-  const listClassLi = document.createElement("li");
-
   const agentTitleElement = document.createElement("h2");
   agentTitleElement.classList.add("class-valorant");
   agentTitleElement.textContent = sections[h].title;
 
-  listClassLi.appendChild(agentTitleElement);
-  listClassOl.appendChild(listClassLi);
-  sectionElement.appendChild(listClassOl);
+  sectionElement.appendChild(agentTitleElement);
   document.body.appendChild(sectionElement);
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("container");
 
   const agents = sections[h].agents;
-  for (let g = 0; g < agents.length; g++) {
-    const agent = agents[g];
+  for (let i = 0; i < agents.length; i++) {
+    const agent = agents[i];
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
 
@@ -130,3 +206,6 @@ for (let h = 0; h < sections.length; h++) {
     sectionElement.appendChild(cardContainer);
   }
 }
+
+const div = getElementById("content");
+getElementByClassname();
