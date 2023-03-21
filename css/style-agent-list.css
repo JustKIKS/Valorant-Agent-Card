@@ -3,6 +3,57 @@
   src: url(../fonts/Anton-Regular.ttf);
 }
 
+@font-face {
+  font-family: nav-fonts;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+.navbar {
+  position: absolute;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  background-color: #111;
+  align-items: center;
+  font-family: nav-fonts;
+  z-index: 3;
+}
+
+.logo {
+  filter: brightness(9);
+  width: 60px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.cmoon {
+  list-style: none;
+  margin: 0px 25px 0 25px;
+  font-size: 1.2em;
+}
+
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  filter: invert(100%);
+  width: 48px;
+  height: 61px;
+}
+
 #bg-video {
   object-fit: cover;
   height: 100%;
@@ -10,6 +61,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0;
 }
 
 .title-section {
@@ -27,7 +79,7 @@
   font-weight: 100;
   font-size: 120px;
   z-index: 1;
-  animation: aparition 0.8s ease-out;
+  animation: aparition 0.8s ease-in;
 }
 
 .home {
@@ -46,6 +98,7 @@
   font-weight: 100;
   font-size: 40px;
   text-transform: uppercase;
+  animation: aparition2 0.8s ease-in;
 }
 
 .card {
@@ -55,7 +108,7 @@
   width: 500px;
   height: fit-content;
   border-style: solid;
-  border-width: 3px;
+  border-width: 0px;
   border-radius: 10px;
   border-color: rgba(194, 192, 192, 0.1);
   box-shadow: 10px 5px 5px #cacaca;
@@ -134,5 +187,62 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes aparition2 {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .menu-hamburger {
+    display: block;
+  }
+
+  .logo {
+    padding: 20px;
+  }
+
+  .nav-links {
+    top: 109px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100%;
+    transition: 0.5s ease;
+    z-index: 2;
+  }
+
+  .mobile-menu {
+    margin-top: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cmoon {
+    margin: 20px 0 20px 0;
+  }
+
+  .navbar {
+    height: 110px;
+    padding: 20px;
+    padding-left: 0;
+  }
+
+  .menu-hamburger {
+    padding: 10px;
   }
 }

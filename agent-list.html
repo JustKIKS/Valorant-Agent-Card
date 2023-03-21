@@ -14,6 +14,28 @@
     />
   </head>
   <body>
+    <nav class="navbar">
+      <img
+        src="./img/valorant-logo-transparent-free-png.webp"
+        alt=""
+        class="logo"
+      />
+      <a href=""></a>
+      <div class="nav-links">
+        <ul>
+          <li class="cmoon"><a href="">Home</a></li>
+          <li class="cmoon"><a href="">Agents</a></li>
+          <li class="cmoon"><a href="">Cartes</a></li>
+          <li class="cmoon"><a href="">Arsenal</a></li>
+          <li class="cmoon"><a href="">Socials</a></li>
+        </ul>
+      </div>
+      <img
+        src="./img/menu_FILL0_wght400_GRAD0_opsz48.png"
+        alt="menu hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
     <header class="title-section">
       <video id="bg-video" autoplay loop muted>
         <source
@@ -27,4 +49,12 @@
     <footer class="title-section"></footer>
     <script src="./js/cardbuilder.js"></script>
   </body>
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+    });
+  </script>
 </html>
