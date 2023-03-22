@@ -14,12 +14,12 @@
 }
 
 body {
-  background-color: hwb(80 84% 12%);
+  background-color: rgb(235, 239, 227);
 }
 
 .navbar {
   position: fixed;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
