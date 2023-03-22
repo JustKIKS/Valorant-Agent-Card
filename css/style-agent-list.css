@@ -8,9 +8,18 @@
   src: url(../fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: background-title-fonts;
+  src: url(../fonts/DIN\ Next\ LT\ W04\ Medium.ttf);
+}
+
+body {
+  background-color: hwb(80 84% 12%);
+}
+
 .navbar {
-  position: absolute;
-  padding: 40px;
+  position: fixed;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -20,16 +29,55 @@
   align-items: center;
   font-family: nav-fonts;
   z-index: 3;
+  transition: 0.6s;
+}
+
+.navbar.sticky {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .logo {
   filter: brightness(9);
   width: 60px;
+  transition: 0.6s;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
+}
+
+a {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #111;
+  padding: 2px 13px 2px 13px;
+  border-radius: 6px;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 70, 85);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+a:hover {
+  border-color: white;
+}
+
+.navbar .nav-links li {
+  text-transform: uppercase;
 }
 
 .navbar .nav-links ul {
@@ -67,7 +115,7 @@
 .title-section {
   position: relative;
   color: white;
-  background-color: #fb4554;
+  background-color: #111;
   padding: 256px 0 256px 0;
 }
 
@@ -82,7 +130,18 @@
   animation: aparition 0.8s ease-in;
 }
 
+/* .background-title {
+  position: absolute;
+  z-index: 1;
+  font-family: background-title-fonts;
+  text-transform: uppercase;
+  color: #dde0d6;
+  font-size: 3.2vw;
+} */
+
 .home {
+  z-index: 2;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0px 16px 32px 16px;
@@ -99,6 +158,7 @@
   font-size: 40px;
   text-transform: uppercase;
   animation: aparition2 0.8s ease-in;
+  color: rgb(255, 70, 85);
 }
 
 .card {
@@ -192,11 +252,11 @@
 @keyframes aparition2 {
   from {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
   }
 }
 
@@ -213,18 +273,20 @@
     top: 109px;
     position: absolute;
     width: 100%;
+    height: calc(100vh - 110px);
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(7px);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -100%;
-    transition: 0.5s ease;
     z-index: 2;
+    opacity: 0;
   }
 
   .mobile-menu {
+    opacity: 1;
     margin-top: 0;
+    transition: 0.7s ease;
   }
 
   .nav-links ul {
@@ -244,5 +306,9 @@
 
   .menu-hamburger {
     padding: 10px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 }
