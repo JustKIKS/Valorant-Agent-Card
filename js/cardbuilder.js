@@ -3,7 +3,7 @@
 // ##########
 const duellistArray = [
   {
-    img: "./img/jett 2.png",
+    img: "./img/Jett 2.png",
     agentName: "Jett",
     agentClass: "Duellist",
     linkLore: "https://valorant-lore.fandom.com/wiki/Jett",

@@ -48,7 +48,7 @@ body {
   text-decoration: none;
 }
 
-a {
+.cmoon {
   position: relative;
   border-style: solid;
   border-width: 1px;
@@ -57,7 +57,7 @@ a {
   border-radius: 6px;
 }
 
-a:after {
+.cmoon:after {
   content: "";
   position: absolute;
   background-color: rgb(255, 70, 85);
@@ -67,12 +67,12 @@ a:after {
   bottom: -10px;
 }
 
-a:hover::after {
+.cmoon:hover::after {
   width: 100%;
   transition: 0.4s;
 }
 
-a:hover {
+.cmoon:hover {
   border-color: white;
 }
 
