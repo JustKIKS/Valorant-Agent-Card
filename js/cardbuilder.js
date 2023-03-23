@@ -126,7 +126,7 @@ const sentinelsArray = [
 // #############
 
 const duellistsSection = {
-  title: "Duellist",
+  title: "Duelists",
   agents: duellistArray,
 };
 
