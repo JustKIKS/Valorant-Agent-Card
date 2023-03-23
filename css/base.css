@@ -3,6 +3,12 @@
   src: url(../fonts/Tungsten-Bold.ttf);
 }
 
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   margin: 0;
 }
