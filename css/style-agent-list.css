@@ -175,6 +175,7 @@ body {
   margin: 0 0 40px 0;
   transform: scale(1);
   transition: transform 0.1s ease;
+  padding: 0;
 }
 
 .card:hover > .card-image {
@@ -275,7 +276,7 @@ body {
     position: absolute;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(7px);
     display: flex;
     justify-content: center;
@@ -318,11 +319,5 @@ body {
 
   .no-scroll {
     overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 2560px) {
-  .card {
-    padding: 0 5px 0 5px;
   }
 }

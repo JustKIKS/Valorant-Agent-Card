@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartes Valorant</title>
+    <link rel="stylesheet" href="../Valorant-Agent-Card/css/carte.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img
+        src="./img/valorant-logo-transparent-free-png.webp"
+        alt=""
+        class="logo"
+      />
+      <a href=""></a>
+      <div class="nav-links">
+        <ul class="drop-down-menu">
+          <li class="cmoon"><a href="">Agents Skills ▾</a></li>
+          <li class="cmoon">
+            <a href="../Valorant-Agent-Card/carte.html">Cartes</a>
+          </li>
+          <li class="cmoon"><a href="">Arsenal</a></li>
+          <li class="cmoon"><a href="">Socials ▾</a></li>
+        </ul>
+      </div>
+      <img
+        src="./img/menu_FILL0_wght400_GRAD0_opsz48.png"
+        alt="menu hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        console.log(navbar);
+        navbar.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-menu");
+      document.body.classList.toggle("no-scroll");
+    });
+  </script>
+</html>

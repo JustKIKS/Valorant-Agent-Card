@@ -1,0 +1,172 @@
+@font-face {
+  font-family: class-fonts;
+  src: url(../fonts/Anton-Regular.ttf);
+}
+
+@font-face {
+  font-family: nav-fonts;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: background-title-fonts;
+  src: url(../fonts/DIN\ Next\ LT\ W04\ Medium.ttf);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(235, 239, 227);
+}
+
+.navbar {
+  position: fixed;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  background-color: #111;
+  align-items: center;
+  font-family: nav-fonts;
+  z-index: 3;
+  transition: 0.6s;
+}
+
+.navbar.sticky {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo {
+  filter: brightness(9);
+  width: 45px;
+  transition: 0.6s;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.cmoon {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #111;
+  padding: 2px 13px 2px 13px;
+  border-radius: 6px;
+}
+
+.cmoon:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 70, 85);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+}
+
+.cmoon:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.cmoon:hover {
+  border-color: white;
+}
+
+.navbar .nav-links li {
+  text-transform: uppercase;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.cmoon {
+  list-style: none;
+  margin: 0px 25px 0 25px;
+  font-size: 1em;
+}
+
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  filter: invert(100%);
+  width: 48px;
+  height: 61px;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .menu-hamburger {
+    display: block;
+  }
+
+  .logo {
+    padding: 20px;
+  }
+
+  .nav-links {
+    top: 80px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2; */
+    /* opacity: 0; */
+    margin-left: -100%;
+    transition: all 0.5 ease;
+  }
+
+  .mobile-menu {
+    /* opacity: 1; */
+    /* margin-top: 0; */
+    margin-left: 0;
+    transition: 0.7s ease;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cmoon {
+    margin: 20px 0 20px 0;
+  }
+
+  .cmoon a {
+    color: black;
+  }
+
+  .navbar {
+    height: 80px;
+    padding: 20px;
+    padding-left: 0;
+  }
+
+  .menu-hamburger {
+    padding: 10px;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .card {
+    padding: 0 5px 0 5px;
+  }
+}
