@@ -297,6 +297,7 @@ body {
   .nav-links ul {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .cmoon {
